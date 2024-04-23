@@ -14,6 +14,9 @@ Pod::Spec.new do |s|
 
   s.source             = { :git => "https://github.com/jpush/jcore-react-native.git", :tag => "#{s.version}" }
   s.source_files       = 'ios/RCTJCoreModule/*.{h,m}'
+  s.resource_bundles = {
+    'JCore_React_Native_Privacy' => ['ios/RCTJCoreModule/PrivacyInfo.xcprivacy'],
+  }
   s.preserve_paths     = "**/*.js"
   s.vendored_libraries = "ios/RCTJCoreModule/*.a"
  	s.libraries       = 'z','resolv', 'sqlite3', 'c++.1'
